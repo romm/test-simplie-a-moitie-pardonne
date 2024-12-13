@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>📄 Test simplifié à moitié pardonné</title>
+
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/atom-one-light.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="images/sun-tornado.svg">
+					<h1>Test simplifié<br/>à moitié pardonné</h1>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg" data-auto-animate>
+					<div style="display: flex;gap: 3rem;align-items: center;">
+						<div>
+							<b>Romain Canon</b>
+							<img src="images/profile-picture.jpg" alt="Profile picture"/>
+						</div>
+						<div>
+							<table class="social table-unstyled">
+								<tr>
+									<td>
+										<img src="images/github.svg" alt="Github" class="social"/>
+									</td>
+									<td>@Romm</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/mastodon.svg" alt="Mastodon" class="social"/>
+									</td>
+									<td>@Romm@mastodon.social</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/bluesky.svg" alt="Bluesky" class="social"/>
+									</td>
+									<td>@romain-canon.com</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<div class="text-left">
+						<h3 class="title-normal">
+							<a href="https://www.jetbrains.com/lp/devecosystem-2020/php/">
+								2020 &mdash; Jetbrains Developer Survey
+							</a>
+						</h3>
+						&emsp;→ 64% des répondants écrivent des tests en PHP
+					</div>
+					<br/>
+					<br/>
+					<div class="fragment text-left">
+						<h3 class="title-normal">
+							<a href="https://www.jetbrains.com/lp/devecosystem-2023/php/">
+								2023 &mdash; Jetbrains Developer Survey
+							</a>
+						</h3>
+						&emsp;→ 69% des répondants écrivent des tests en PHP
+					</div>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg" data-auto-animate data-auto-animate-restart>
+					<h3 class="text-left">Pourquoi<br/>testons-nous<br/>nos applications ?</h3>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg" data-auto-animate>
+					<h3 class="text-left">Pourquoi<br/>testons-nous<br/>nos applications ?</h3>
+
+					<ol>
+						<li>
+							Garantir leur bon fonctionnement
+						</li>
+						<li class="fragment">
+							Décrire les résultats attendus des composants
+						</li>
+						<li class="fragment">
+							Éviter au maximum les régressions
+						</li>
+					</ol>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg" data-auto-animate data-auto-animate-restart>
+					<h3>Avec quels outils ?</h3>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg" data-auto-animate>
+					<h3>Avec quels outils ?</h3>
+
+					<div class="items-center r-vstack">
+						<p>
+							PHPUnit • Codeception • Behat • PHPSpec
+						</p>
+						<p class="fragment">
+							Couverture de tests
+						</p>
+						<p class="fragment">
+							Intégration Continue
+						</p>
+					</div>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<section data-background-image="images/sun-tornado.svg">
+						<h2>Quelques pièges à éviter</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Couverture de tests</h3>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Couverture de tests</h3>
+
+						<div class="items-center r-vstack">
+							<p>
+								Attention aux demandes de « <abbr title="Key Performance Indicator" class="sigle">KPI</abbr> »
+							</p>
+							<p class="fragment">
+								Couverture de tests élevée ≠ efficacité
+							</p>
+							<p class="fragment">
+								Privilégier le <a href="https://infection.github.io/">Mutation Testing</a> et le <abbr title="Mutation Score Indicator" class="sigle">MSI</abbr>
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h3>Cibler les composants testés</h3>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Cibler les composants testés</h3>
+
+						<div class="items-start">
+							<p>
+								Privilégier les parties critiques <b class="sigle">pour le métier</b>
+							</p>
+							<p class="fragment">
+								Validation du panier <br/><b class="sigle">VS</b><br/> Changement de photo de profil
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h4>Attention aux mocks</h4>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Attention aux mocks</h4>
+
+						<div class="r-stack r-stretch">
+							<img src="images/mock-1.jpg" alt="Mock"/>
+							<img src="images/mock-2.jpg" class="fragment" alt="Mock"/>
+						</div>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h2>Pratiquer</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Pratiquer</h2>
+
+						<div class="items-start text-left r-vstack">
+							<p>
+								Écrire des tests
+							</p>
+							<p class="fragment">
+								Commencer par des composants simples
+							</p>
+							<p class="fragment">
+								Apprendre à différencier tests unitaires, fonctionnels, intégration, end 2 end…
+							</p>
+						</div>
+					</section>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<section data-background-image="images/sun-tornado.svg">
+						<h2>Et la maintenabilité<br/>dans tout ça ?</h2>
+					</section>
+
+					<section style="margin-top: 6rem;">
+						<div style="display: flex;margin-left: auto;margin-right: auto;">
+							<div style="flex: 1;text-align: right;font-size: 15rem;line-height: 1rem;" class="sigle">
+								“
+							</div>
+							<div style="display: flex;flex-direction: column;align-items: center;text-align: left;font-size: 3.5rem;">
+								<div>Les tests devraient répondre</div>
+								<div>aux mêmes critères de qualité</div>
+								<div>que le code applicatif</div>
+							</div>
+							<div style="flex: 1;display: flex;align-items: end;font-size: 15rem;line-height: 1rem;position:relative;top: 7rem;"
+								 class="sigle">
+								”
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Disclaimer</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Disclaimer</h2>
+
+						<p>Il est <b>toujours</b> préférable de tester une application, quite à délaisser la maintenabilité de sa suite de tests</p>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h2 class="text-left">Partager les outils d'analyse statique</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="text-left">Partager les outils d'analyse statique</h2>
+						<br />
+						<h3 class="title-normal text-left">PHPStan • Psalm</h3>
+
+						<div class="items-start text-left r-vstack">
+							<p class="fragment">
+								&emsp;Aident à détecter des bugs dans les tests
+							</p>
+							<p class="fragment">
+								&emsp;Améliorent la confiance accordée aux tests
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="text-left">Partager les outils d'analyse statique</h2>
+						<br/>
+						<h3 class="title-normal text-left">PHP-CS-Fixer • PHP_CodeSniffer</h3>
+
+						<div class="items-start text-left r-vstack-">
+							<p class="fragment">
+								&emsp;<a href="https://www.php-fig.org/per/coding-style/">PER Coding Style</a> (PSR-1 / PSR-12)
+							</p>
+							<p class="fragment">
+								&emsp;Forcer le style → fin du débat
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h2>Clarifier le nom des tests</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Clarifier le nom des tests</h2>
+
+						<div class="items-start text-left r-vstack">
+							<p style="font-family: monospace;">
+								❌&emsp;test_it_works
+							</p>
+							<p class="fragment" style="font-family: monospace;">
+								✅&emsp;test_product_can_be_added_to_cart
+							</p>
+						</div>
+					</section>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<section data-background-image="images/sun-tornado.svg">
+						<h2>Attention à<br/>la lourdeur des tests</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h3 class="title-normal">Il est difficile pour un test trop long…</h3>
+					</section>
+
+					<section data-auto-animate>
+						<h3 class="title-normal">Il est difficile pour un test trop long…</h3>
+
+						<ul class="list-unstyled">
+							<li>
+								…de comprendre son utilité
+							</li>
+							<li class="fragment spaced">
+								…d'identifier le problème lorsqu'il plante
+							</li>
+							<li class="fragment spaced">
+								…de le maintenir lorsque le code évolue :
+								<ul>
+									<li>→ Nouvelle fonctionnalité</li>
+									<li>→ Refactor</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h3 class="title-normal">Un test trop long peut…</h3>
+					</section>
+
+					<section data-auto-animate>
+						<h3 class="title-normal">Un test trop long peut…</h3>
+
+						<ul class="list-unstyled">
+							<li>
+								…être découpé en plusieurs tests
+							</li>
+							<li class="fragment spaced">
+								…utiliser les «&nbsp;data providers&nbsp;»
+							</li>
+							<li class="fragment spaced">
+								…utiliser l'attribut <code class="php-attribute">#[TestWith(…)]</code>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<section data-auto-animate data-auto-animate-restart data-background-image="images/sun-tornado.svg">
+						<h2>Pattern « A&#8729;A&#8729;A »</h2>
+					</section>
+
+					<section data-auto-animate data-background-image="images/sun-tornado.svg">
+						<h2>Pattern « A&#8729;A&#8729;A »</h2>
+
+						<table class="table-unstyled">
+							<tr>
+								<td><b>A</b>rrange</td>
+								<td>&mdash;</td>
+								<td>Initialisation des données</td>
+							</tr>
+							<tr class="fragment">
+								<td><b>A</b>ct</td>
+								<td>&mdash;</td>
+								<td>Exécution du composant</td>
+							</tr>
+							<tr class="fragment">
+								<td><b>A</b>ssert</td>
+								<td>&mdash;</td>
+								<td>Validation du résultat</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="images/sun-tornado.svg">
+						<h2>Améliorer l'initialisation des données</h2>
+					</section>
+
+					<section data-background-image="images/subtle-prism.svg">
+						<div class="r-stack">
+						<pre>
+							<code class="r-stretch" data-trim data-line-numbers="|5-8,12-15">
+								public function test_can_bind_address_to_customer()
+								{
+									// Arrange
+									$customer = new Customer(
+										name: new Name('Ada Lovelace'),
+										birthdate: new DateTimeImmutable('1971-11-08'),
+										email: new Email('ada.lovelace@example.com'),
+										phone: new PhoneNumber('+33612345678'),
+									);
+
+									$address = new Address(
+										street: new Street('221B Baker Street'),
+										city: new City('London'),
+										zipCode: new ZipCode('NW1 6XE'),
+										country: new Country('United Kingdom'),
+									);
+
+									// Act
+									// Assert
+								}
+							</code>
+						</pre>
+
+							<ul class="list-unstyled" style="font-weight: bolder;font-size: 250%;">
+								<li class="fragment">
+									😨 X 10
+								</li>
+								<li class="fragment">
+									😱 x 100
+								</li>
+								<li class="fragment">
+									🥵 x 1000
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section data-background-image="images/subtle-prism.svg">
+						<div class="r-stack">
+						<pre>
+							<code class="r-stretch" data-trim data-line-numbers="8-9">
+								final class Customer
+								{
+									public function __construct(
+										private(set) Name $name,
+										private(set) DateTimeInterface $birthDate,
+										private(set) Email $email,
+										private(set) PhoneNumber $phoneNumber,
+										// Nouvelle propriété
+										private(set) Nationality $nationality,
+									) {}
+								}
+							</code>
+						</pre>
+
+							<ul style="list-style-type:none; font-size: 200%;font-weight: bolder;">
+								<li class="fragment">
+									😨 X 10
+								</li>
+								<li class="fragment">
+									😱 x 100
+								</li>
+								<li class="fragment">
+									🥵 x 1000
+								</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<section data-auto-animate data-background-image="images/sun-tornado.svg">
+						<h2>Centralisons<br/>la création des objets</h2>
+					</section>
+
+					<section data-auto-animate data-background-image="images/sun-tornado.svg">
+						<h2>Centralisons<br/>la création des objets</h2>
+
+						<div class="items-start">
+							<p>
+								<b class="sigle">V</b>alue <b class="sigle">O</b>bjects
+							</p>
+							<p class="fragment">
+								<b class="sigle">D</b>ata <b class="sigle">T</b>ransfer <b class="sigle">O</b>bjects
+							</p>
+							<p class="fragment">
+								Entities
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart>
+						<h3>Object Mother Pattern</h3>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Object Mother Pattern</h3>
+						<br/>
+						<p>
+							“An <b>Object Mother</b> is a kind of class used in testing to help create example objects that you use for testing”
+						</p>
+						<br />
+						<p class="text-right">
+							<small>
+								<a href="https://martinfowler.com/bliki/ObjectMother.html">https://martinfowler.com/bliki/ObjectMother.html</a>
+							</small>
+						</p>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim data-line-numbers="|4,6">
+							final class FakeEmail
+							{
+								public static function new(
+									?string $email = null
+								): Email {
+									return new Email($email ?? 'jane.doe@example.com');
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim>
+							final class FakePhoneNumber
+							{
+								public static function new(
+									?string $phone = null
+								): PhoneNumber {
+									return new PhoneNumber($phone ?? '+33612345678');
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim>
+							final class FakeDate
+							{
+								public static function new(
+									?string $date = null
+								): DateTimeInterface {
+									return new DateTimeImmutable($date ?? '1971-11-08');
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim data-line-numbers="|4-7,10-13">
+							final class FakeCustomer
+							{
+								public static function new(
+									?string $name      = null,
+									?string $birthDate = null,
+									?string $email     = null,
+									?string $phone     = null,
+								): Customer {
+									return new Customer(
+										name:      FakeName::new($name),
+										birthDate: FakeDate::new($birthDate),
+										email:     FakeEmail::new($email),
+										phone:     FakePhoneNumber::new($phone),
+									);
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim data-line-numbers="4-5">
+							public function test_can_bind_address_to_customer()
+							{
+								// Arrange
+								$customer = FakeCustomer::new(); // 😌
+								$address = FakeAddress::new();   // 😌
+
+								// Act
+								// Assert
+							}
+						</code>
+					</pre>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="images/subtle-prism.svg" data-auto-animate>
+						<h3>Besoin d'une valeur<br />en particulier ?</h3>
+					</section>
+
+					<section data-background-image="images/subtle-prism.svg" data-auto-animate>
+						<h3>Besoin d'une valeur<br />en particulier ?</h3>
+
+						<pre>
+							<code class="r-stretch" data-trim data-line-numbers="5-6">
+								public function test_can_bind_address_to_customer()
+								{
+									// Arrange
+									$customer = FakeCustomer::new(
+										// This value is important for the test
+										email: 'ada.lovelace@example.com'
+									);
+
+									// Act
+									// Assert
+								}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="images/subtle-prism.svg" data-auto-animate data-auto-animate-restart>
+						<h3>Une nouvelle propriété ?</h3>
+					</section>
+
+					<section data-background-image="images/subtle-prism.svg" data-auto-animate>
+						<h3>Une nouvelle propriété ?</h3>
+
+						<pre>
+							<code class="r-stretch" data-trim data-line-numbers="8,15">
+								final class FakeCustomer
+								{
+									public static function new(
+										?string $name        = null,
+										?string $birthDate   = null,
+										?string $email       = null,
+										?string $phone       = null,
+										?string $nationality = null,
+									): Customer {
+										return new Customer(
+											name:        FakeName::new($name),
+											birthDate:   FakeDate::new($birthDate),
+											email:       FakeEmail::new($email),
+											phone:       FakePhoneNumber::new($phone),
+											nationality: FakeNationality::new($nationality),
+										);
+									}
+								}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section data-background-image="images/subtle-prism.svg">
+					<section data-auto-animate data-auto-animate-restart data-background-image="images/sun-tornado.svg">
+						<h2>Dynamiser les données</h2>
+					</section>
+
+					<section data-auto-animate data-background-image="images/sun-tornado.svg">
+						<h2>Dynamiser les données</h2>
+
+						<br/>
+						<h4 class="title-normal">
+							<a class="sigle" href="https://fakerphp.org/">FakerPHP.org</a>
+						</h4>
+						<br/>
+						<pre><code>$ composer require --dev fakerphp/faker</code></pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim data-line-numbers="|8-12">
+							final class FakeEmail
+							{
+								public static function new(…) {…}
+
+								public static function random(): Email
+								{
+									return new Email(
+										email: faker()->email()
+										// nicolas.enid@block.com
+										// dooley.freddie@gmail.com
+										// leonardo55@rempel.net
+										// …
+									);
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim>
+							final class FakePhoneNumber
+							{
+								public static function new(…) {…}
+
+								public static function random(): PhoneNumber
+								{
+									return new PhoneNumber(
+										phone: faker()->phoneNumber()
+										// +33 3 22 15 53 93
+										// +33 6 82 26 45 81
+										// +33 2 64 27 30 34
+										// …
+									);
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<pre>
+						<code class="r-stretch" data-trim>
+							final class FakeCustomer
+							{
+								public static function new(…) {…}
+
+								public static function random(): Customer
+								{
+									return new Customer(
+										name: FakeName::random(),
+										birthDate: FakeDate::random(),
+										email: FakeEmail::random(),
+										phone: FakePhoneNumber::random(),
+										nationality: FakeNationality::random(),
+									);
+								}
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<h3>Préserver<br/>les mêmes données</h3>
+					</section>
+
+					<section>
+						<pre>
+							<code class="r-stretch" data-trim data-line-numbers="|18-20">
+								use PHPUnit\Event\Test\PreparationStarted;
+								use PHPUnit\Event\Test\PreparationStartedSubscriber;
+
+								class FixedSeed implements PreparationStartedSubscriber
+								{
+									/**
+									 * This subscriber is specifically tied to the use of
+									 * Faker and is triggered before each PHPUnit test is
+									 * executed. It reassigns the seed for Faker's random
+									 * functions based on the test's signature, ensuring
+									 * that the same seed is used consistently for each
+									 * test run. As a result, Faker generates the same
+									 * random values for a given test, provided the test
+									 * signature remains unchanged.
+									 */
+									public function notify(PreparationStarted $event)
+									{
+										$hash = crc32($event->test()->id());
+
+										faker()->seed($hash);
+									}
+								}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="images/sun-tornado.svg">
+						<h2>Utilisation<br />dans les Fixtures</h2>
+					</section>
+
+					<section data-background-image="images/subtle-prism.svg">
+					<pre>
+						<code class="r-stretch" data-trim data-line-numbers="|6-9|13">
+							final class AppFixtures extends Fixture
+							{
+								public function load(ObjectManager $manager): void
+								{
+									$manager->persist(
+										FakeCustomer::new(
+											name: 'Ada Lovelace',
+											email: 'ada.lovelace@example.com',
+										)
+									);
+
+									for ($i = 0; $i < 10; $i++) {
+										$manager->persist(FakeCustomer::random());
+									}
+
+									$manager->flush();
+								}
+							}
+						</code>
+					</pre>
+					</section>
+				</section>
+
+				<section data-auto-animate data-background-image="images/sun-tornado.svg">
+					<h2>En résumé</h2>
+				</section>
+
+				<section data-auto-animate data-background-image="images/sun-tornado.svg">
+					<h2>En résumé</h2>
+
+					<p>
+						Valorisez vos tests comme votre code applicatif
+					</p>
+					<p class="fragment">
+						Ne délaissez pas la lisibilité
+					</p>
+					<p class="fragment">
+						Prenez soin de vos tests, ils vous le rendront
+					</p>
+				</section>
+
+				<section data-background-image="images/sun-tornado.svg">
+					<h2 class="r-fit-text">Merci !</h2>
+
+					<div>
+						<table class="social table-unstyled">
+							<tr>
+								<td>
+									<img src="images/github.svg" alt="Github" class="social"/>
+								</td>
+								<td>@Romm</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/mastodon.svg" alt="Mastodon" class="social"/>
+								</td>
+								<td>@Romm@mastodon.social</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/bluesky.svg" alt="Bluesky" class="social"/>
+								</td>
+								<td>@romain-canon.com</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				navigationMode: 'linear',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+						RevealMarkdown,
+						RevealHighlight,
+						RevealNotes,
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.title-normal {
+  text-transform: none !important;
+}
+
+.list-unstyled {
+  li {
+    list-style: none;
+  }
+}
+
+li.spaced {
+  margin-top: 40px;
+}
+
+code.php-attribute {
+  color: #9e880d;
+}
+
+.table-unstyled {
+  td {
+    border: none !important;
+  }
+}
+
+.sigle {
+  color: #475569;
+}
+
+img.social {
+  width: 50px !important;
+  max-width: initial !important;
+  max-height: initial !important;
+  margin: 0 !important;
+  position: relative;
+  top: 10px;
+}
+
+table.social {
+  tr {
+    padding: 0 0 2.5rem !important;
+  }
+  td {
+
+    &:first-of-type {
+      padding-right: 2rem !important;
+    }
+
+    &:nth-of-type(2) {
+      font-weight: bold;
+    }
+  }
+}
